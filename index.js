@@ -4,10 +4,10 @@ var units = "metric";
 
 async function atualizarClima(city) {
     
-    var final_link = "http://api.openweathermap.org/data/2.5/weather?lang=pt_br"+ "&units=" + units + "&q=" + city + "&APPID=3a882899ef839d2b08dc9d4599e34f32"; 
+    var final_link = "https://api.openweathermap.org/data/2.5/weather?lang=pt_br"+ "&units=" + units + "&q=" + city + "&APPID=3a882899ef839d2b08dc9d4599e34f32"; 
     
     const response = await fetch(final_link);
-    console.log(response);
+    
     if (response.status == 404){
         $("#error").css({"display": "block"})
     } else {
